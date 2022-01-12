@@ -52,7 +52,8 @@ creation_rules:
       44A6623C65C5ABA5ED5B754C58DD4F4522D6FFBC
 ```
 
-<b>IMPROTANT</b> everytime before encrypt you make sure that the secret is not encrypted
+<b>IMPROTANT</b> everytime before encrypt you make sure that the secret is not encrypted.
+
 `sops -i -e secrets.env` -> encrypt
 `sops -i -d secrets.env` -> decrypt
 
