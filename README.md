@@ -5,24 +5,32 @@ Simple and flexible tool for managing secrets
 ---
 ## Install dependentcies
 <b>Install sops for mac</b>
-`brew install sops`
+```
+brew install sops
+```
 
 <b>Install gnupg for mac</b>
-`brew install gnupg`
+```
+brew install gnupg
+```
 
 <b>Install age for mac</b>
-`brew install age`
+```
+brew install age
+```
 
 ---
 ## Gnupg
 #### Generate certificate
-`gpg --full-generate-key`  เลือก rsa 4096
+```
+gpg --full-generate-key
+```
 
 #### List key
 | Commands                | Description          |
 | ----------------------- | -------------------- |
-| `gpg --list-key`        | list all public key  |
-| `gpg --list-secret-key` | list all private key |
+| ```gpg --list-key```        | list all public key  |
+| ```gpg --list-secret-key``` | list all private key |
 
 #### Encryption
 | Commands                                        | Description |
@@ -32,7 +40,7 @@ Simple and flexible tool for managing secrets
 
 
 #### Sops configure file
-.sops.yaml -> sops configure file
+<b>.sops.yaml</b> -> sops configure file
 
 ```
 creation_rules:
@@ -49,14 +57,22 @@ creation_rules:
 
 
 #### Export private key
-`gpg --list-secret-keys`
-`gpg --export-secret-keys <your_id> > private.key`
+```
+gpg --list-secret-keys
+```
+```
+gpg --export-secret-keys <your_id> > private.key
+```
 
 #### Import private key
-`gpg --import private.key`
+```
+gpg --import private.key
+```
 
 #### Edit expire date
-`gpg --edit-key <your_id>`
+```
+gpg --edit-key <your_id>
+```
 ` > expire`
 
 #### Remove certificate
@@ -68,13 +84,19 @@ creation_rules:
 
 ## Age
 <b>Generate certificate</b>
-`age-keygen -o key.txt`
+```
+age-keygen -o key.txt
+```
 
 <b>Encryption</b>
-`sops -a age1vrvm0ym63632keqjssa2c6q869c7m8mt4ev2ar2pd7waxel29cwq3s67qm -i -e pf-secret.env`
+```
+sops -a age1vrvm0ym63632keqjssa2c6q869c7m8mt4ev2ar2pd7waxel29cwq3s67qm -i -e pf-secret.env
+```
 
 <b>Decryption</b>
-`SOPS_AGE_KEY_FILE=key.txt sops -a age1vrvm0ym63632keqjssa2c6q869c7m8mt4ev2ar2pd7waxel29cwq3s67qm -i -d pf-secret.env`
+```
+SOPS_AGE_KEY_FILE=key.txt sops -a age1vrvm0ym63632keqjssa2c6q869c7m8mt4ev2ar2pd7waxel29cwq3s67qm -i -d pf-secret.env
+```
 
 ---
 
