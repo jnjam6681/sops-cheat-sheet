@@ -79,4 +79,9 @@ creation_rules:
 ---
 
 ## Referrences
-- [cfdf](dfddf)
+- [https://github.com/mozilla/sops](https://github.com/mozilla/sops)
+- [https://github.com/FiloSottile/age](https://github.com/FiloSottile/age)
+- [https://dev.to/stack-labs/manage-your-secrets-in-git-with-sops-common-operations-118g](https://dev.to/stack-labs/manage-your-secrets-in-git-with-sops-common-operations-118g)
+- [https://makandracards.com/makandra-orga/37763-gpg-extract-private-key-and-import-on-different-machine](https://makandracards.com/makandra-orga/37763-gpg-extract-private-key-and-import-on-different-machine)
+- [https://nickjanetakis.com/blog/creating-and-managing-a-gpg-key-pair](https://nickjanetakis.com/blog/creating-and-managing-a-gpg-key-pair)
+- [https://stackoverflow.com/questions/33361068/gnupg-there-is-no-assurance-this-key-belongs-to-the-named-user](https://stackoverflow.com/questions/33361068/gnupg-there-is-no-assurance-this-key-belongs-to-the-named-user)
