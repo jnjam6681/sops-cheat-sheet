@@ -1,0 +1,32 @@
+creation_rules:
+
+  - path_regex: secrets.env
+    age: >-
+      age1vrvm0ym63632keqjssa2c6q869c7m8mt4ev2ar2pd7waxel29cwq3s67qm
+
+  # Specific to `dev_a` env
+  # - path_regex: .*secret.env
+  # - path_regex: pf-*
+  #   # Here, only the `Alice` key-id
+  #   pgp: >-
+  #     44A6623C65C5ABA5ED5B754C58DD4F4522D6FFBC
+
+  # # Specific to `int` env
+  # - path_regex: int\.encrypted\.env$
+  #   # Here, we have :
+  #   # * `Alice` key-id: 5844C613B763F4374BAB2D2FC735658AB38BF93A
+  #   # * `Bobby` key-id: AE0D6FD0242FF896BE1E376B62E1E77388753B8E
+  #   # * `Devon` key-id: 57E6DA39E907744429FB07871141FE9F63986243
+  #   pgp: >-
+  #     5844C613B763F4374BAB2D2FC735658AB38BF93A,
+  #     AE0D6FD0242FF896BE1E376B62E1E77388753B8E,
+  #     57E6DA39E907744429FB07871141FE9F63986243
+
+  # # Specific for new env `dev_a_and_b`
+  # - path_regex: dev_a_and_b\.encrypted.env$
+  #   # Here, we have only `Alice` and `Bobby` :
+  #   # * `Alice` key-id: 5844C613B763F4374BAB2D2FC735658AB38BF93A
+  #   # * `Bobby` key-id: AE0D6FD0242FF896BE1E376B62E1E77388753B8E
+  #   pgp: >-
+  #     5844C613B763F4374BAB2D2FC735658AB38BF93A,
+  #     AE0D6FD0242FF896BE1E376B62E1E77388753B8E
